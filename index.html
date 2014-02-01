@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/bbui.css"  type="text/css" media="screen" />
+
+        <!-- webworks -->
+        <script src="js/webworks.js" type="text/javascript"></script>
+
+        <!-- jquery -->
+
+        <script src="js/zepto.min.js"></script>
+        <!-- libraries -->
+        <script src="js/bbui.js"></script>
+        <script src="cordova.js"></script>
+        
+<script>
+    document.addEventListener("deviceready",function(){
+        setInterval(function(){
+                    var networkState = navigator.connection.type;
+
+                    var states = {};
+                    states[Connection.UNKNOWN]  = 'Sem conexão';
+                    states[Connection.ETHERNET] = 'Ethernet conexão';
+                    states[Connection.WIFI]     = 'WiFi conexão';
+                    states[Connection.CELL_2G]  = 'Cell 2G conexão';
+                    states[Connection.CELL_3G]  = 'Cell 3G conexão';
+                    states[Connection.CELL_4G]  = 'Cell 4G conexão';
+                    states[Connection.CELL]     = 'Conexão generica';
+                    states[Connection.NONE]     = 'Sem conexão';
+                    
+                    alert(states[networkState]);
+        },4000);
+    });
+    
+</script>
+
+        <!-- sample code -->
+        <script src="js/bfb_bootstrap.js"></script>
+
+        <!-- my js -->
+        <script src="js/scripts.js"></script>
+
+    </head>
+    <body> 
+    
+    </body>
+</html>

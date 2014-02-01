@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.app" version="1.0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets">
+    <rim:permissions>
+    </rim:permissions>
+    <name>Webworks gustavo</name>
+    <author>Your Name Here</author>
+    <description>
+       A sample Apache Cordova application that responds to the deviceready event.
+  </description>
+    <icon src="res/icon/blackberry10/icon-80.png" />
+    <rim:splash src="res/screen/blackberry10/splash-1280x768.png" />
+    <rim:splash src="res/screen/blackberry10/splash-720x720.png" />
+    <rim:splash src="res/screen/blackberry10/splash-768x1280.png" />
+    <content src="index.html" />
+    <feature name="Notification" value="Notification" />
+    <feature id="blackberry.app">
+        <param name="websecurity" value="disable" />
+    </feature>
+    <feature name="NetworkStatus" value="NetworkStatus" />
+</widget>

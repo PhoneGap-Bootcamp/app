@@ -1,0 +1,50 @@
+<script>
+        function checkConnection() {
+        
+        function checkTypeConnection(){
+            
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Sem conexão';
+            states[Connection.ETHERNET] = 'Ethernet conexão';
+            states[Connection.WIFI]     = 'WiFi conexão';
+            states[Connection.CELL_2G]  = 'Cell 2G conexão';
+            states[Connection.CELL_3G]  = 'Cell 3G conexão';
+            states[Connection.CELL_4G]  = 'Cell 4G conexão';
+            states[Connection.CELL]     = 'Conexão generica';
+            states[Connection.NONE]     = 'Sem conexão';
+    
+            $("#connection-status h1").html(states[networkState]);
+        }
+        document.addEventListener("online", function(){
+            $("#connection-status h1").html("Temos internet");
+        }, false);
+        
+        document.addEventListener("offline", function(){
+            $("#connection-status h1").html("Não temos internet");
+        }, false);        
+            
+        checkTypeConnection();
+            
+        }
+</script>
+<div data-bb-type="screen"  data-bb-scroll-effect="off">
+
+<div id="principal">
+	<div id="connection-status">
+	    <h1></h1>
+	</div>
+</div>
+
+
+<div data-bb-type="action-bar">
+
+      <div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="img/icons/icon-connection.png"  data-id="connection" data-class="menuItem">Connection</div>
+      <div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="img/icons/icon-battery.png" data-id="battery" data-class="menuItem">Battery</div>
+      <div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="img/icons/icon-localstorage.png" data-id="localstorage" data-class="menuItem">LocalStorage</div>
+      <div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="img/icons/icon1.png">Library</div>
+</div>
+
+
+</div>

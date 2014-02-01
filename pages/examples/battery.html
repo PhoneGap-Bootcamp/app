@@ -1,0 +1,43 @@
+<script>
+        function checkBattery() {
+        window.addEventListener("batterycritical", onBatteryCritical, false);
+
+        function onBatteryCritical(info) {
+            // Handle the battery critical event
+            alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+        }
+            
+        window.addEventListener("batterylow", onBatteryLow, false);
+        
+        function onBatteryLow(info) {
+            // Handle the battery low event
+            alert("Battery Level Low " + info.level + "%");
+        }
+            
+        window.addEventListener("batterystatus", onBatteryStatus, false);
+        
+        function onBatteryStatus(info) {
+            // Handle the online event
+            alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
+        }
+        }
+</script>
+<div data-bb-type="screen"  data-bb-scroll-effect="off">
+
+<div id="principal">
+	<div id="battery-status">
+	    <h1>Aguardando disparar evento...</h1>
+	</div>
+</div>
+
+
+<div data-bb-type="action-bar">
+
+      <div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="img/icons/icon-connection.png"  data-id="connection" data-class="menuItem">Connection</div>
+      <div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="img/icons/icon-battery.png" data-id="battery" data-class="menuItem">Battery</div>
+      <div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="img/icons/icon-localstorage.png" data-id="localstorage" data-class="menuItem">LocalStorage</div>
+      <div data-bb-type="action" data-bb-style="tab" data-bb-overflow="true" data-bb-img="img/icons/icon1.png">Library</div>
+</div>
+
+
+</div>
