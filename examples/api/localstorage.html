@@ -1,0 +1,27 @@
+<script>
+        function localStorage() {
+        
+            function insertDados(nome,sobrenome){
+                db.transaction(function (tx) {
+                        
+                               tx.executeSql('CREATE TABLE IF NOT EXISTS                                         AGENDA(id INTEGER NOT NULL PRIMARY KEY                                             AUTOINCREMENT, nome TEXT NOT NULL, sobrenome                                     VARCHAR NOT NULL)');
+                               
+                               var query = "INSERT INTO AGENDA (nome, sobrenome)                                 VALUES (?, ?);"; 
+                               tx.executeSql(query,                                                              [nome,sobrenome],function(transaction, results){ 
+                                    if (!results.rowsAffected) { 
+                                        alert("Error"); 
+                                    } 
+                                    else { 
+                                        
+                                        selectDataBase();
+                                        
+                                    } 
+                                });
+                            });
+            }
+            
+            $("#insertnewuser").on("click",function(){
+                if()  
+            });
+        }
+</script>

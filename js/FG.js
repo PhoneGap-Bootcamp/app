@@ -1,5 +1,4 @@
 /* FASTGAP https://github.com/GustavoCostaW/FastGap */
-
 (function(window) {
     // FastGap object
     var FG = window.FG = {
@@ -17,8 +16,9 @@
         FG.setDomElements();
         this.addEventListeners();
         this.definitions();
-        
-        Navigator.loadPage('home.html');
+        //document.addEventListener("deviceready",function(){
+            Navigator.loadPage('home.html');
+        //});
     };
     //set fg elements
     FG.setDomElements = function() {
@@ -50,18 +50,20 @@
         
         //scroll
         $("#iscroll").height(window.innerHeight - FG.$headerApp.height());
-        $("menu").height(window.innerHeight);
+        $("#menu-content").height(window.innerHeight);
         
         FG.scrollApp = new IScroll("#iscroll", {
             scrollbars: true,
             mouseWheel: true,
             interactiveScrollbars: true,
+            fadeScrollbars:true
         });
         
-        FG.scrollMenu = new IScroll("menu", {
+        FG.scrollMenu = new IScroll("#menu-content", {
             scrollbars: true,
             mouseWheel: true,
             interactiveScrollbars: true,
+            fadeScrollbars:true
         });
         
         //history # listener
