@@ -1,8 +1,4 @@
-var Page1Controller = function(){};
-
-Page1Controller.prototype = {
-     initialize:function(){
-        
+<script>        
         function checkTypeConnection(){
             
             if(connection == "") {
@@ -18,32 +14,26 @@ Page1Controller.prototype = {
                 states[Connection.CELL]     = 'Conexão generica';
                 states[Connection.NONE]     = 'Sem conexão';
         
-                alert(states[networkState]);
+                $("#internal-page .title-page").html(states[networkState]);
             }
             else if(connection == "true") {
-                alert("Temos internet");
+                $("#internal-page .title-page").html("Temos internet");
             }
             else {
-                alert("Não temos internet");
+                $("#internal-page .title-page").html("Não temos internet");
             }
         }
         document.addEventListener("online", function(){
             connection = "true";
             
-            alert("Temos internet");
+            $("#internal-page .title-page").html("Temos internet");
         }, false);
         
         document.addEventListener("offline", function(){
             connection = "false";
             
-            alert("Não temos internet");
+            $("#internal-page .title-page").html("Não temos internet");
         }, false);        
             
         checkTypeConnection();
-     },
-     destroy: function(){
-         // unset events
-         // stop ajax
-         PageLoad.ajxHandle = null;
-     }
-};
+</script>

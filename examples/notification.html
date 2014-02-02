@@ -1,0 +1,59 @@
+<script>
+    
+    /* OK BUTTON */
+    function alertDismissed() {
+        // fazer algo com o alerta
+    }
+    
+    navigator.notification.alert(
+        'You are the winner!',  // message
+        alertDismissed,         // callback
+        'Game Over',            // title
+        'Done'                  // buttonName
+    );
+    
+    
+    /* CONFIRM BUTTON*/
+    function onConfirm(buttonIndex) {
+        alert('Você selecionou ' + buttonIndex);
+    }
+    
+    // Botões de confirmação
+    function showConfirm() {
+        navigator.notification.confirm(
+            'You are the winner!', // message
+             onConfirm,            // callback to invoke with index of button pressed
+            'Game Over',           // title
+            ['Restart','Exit']         // buttonLabels
+        );
+    }
+    
+    
+    
+    /* PROMPT BUTTON */
+    
+    // process the promp dialog results
+    function onPrompt(results) {
+        alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+    }
+    
+    // Show a custom prompt dialog
+    //
+    function showPrompt() {
+        navigator.notification.prompt(
+            'Please enter your name',  // message
+            onPrompt,                  // callback to invoke
+            'Registration',            // title
+            ['Ok','Exit'],             // buttonLabels
+            'Jane Doe'                 // defaultText
+        );
+    }
+    
+    
+// Beep twice!
+navigator.notification.beep(2);
+
+navigator.notification.vibrate(1000);
+</script>
+
+

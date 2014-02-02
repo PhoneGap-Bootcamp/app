@@ -1,0 +1,24 @@
+<script>
+// success callback
+function onSuccess(contacts) {
+    for (var i=0; i<contacts.length; i++) {
+        alert(contacts[i].displayName);
+    }
+};
+
+// error callback
+function onError(contactError) {
+    alert('onError!');
+};
+
+// specify contact search criteria
+var options = new ContactFindOptions();
+    options.filter="";        // empty search string returns all contacts
+    options.multiple=true;    // return multiple results
+    filter = ["displayName"]; // return contact.displayName field
+
+    // find contacts
+navigator.contacts.find(filter, onSuccess, onError, options);
+</script>
+
+
