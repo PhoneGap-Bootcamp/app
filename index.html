@@ -1,50 +1,81 @@
-<!DOCTYPE html>
-<html>
-    <head>
- 
-        <!-- css -->
-        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/bbui.css"  type="text/css" media="screen" />
+<!-- /* FASTGAP https://github.com/GustavoCostaW/FastGap */ -->
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<!-- LOAD CSS -->
+		<link rel="stylesheet" href="css/topcoat-mobile-dark.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/transitions.css" />
+		<meta charset="UTF-8" />
+		<!-- LOAD JAVASCRIPT -->
 
-        <!-- webworks -->
-        <script src="js/webworks.js" type="text/javascript"></script>
+		<!-- CONTROLLERS -->
+		<script src="js/controllers/AppController.js"></script>
+		<script src="js/controllers/HomeController.js"></script>
+		<script src="js/controllers/Page1Controller.js"></script>
+		<script src="js/controllers/Page2Controller.js"></script>
+		<script src="js/controllers/Page3Controller.js"></script>
+		<script src="js/controllers/Page4Controller.js"></script>
+		<script src="js/controllers/Page5Controller.js"></script>
 
-        <!-- jquery -->
+		<!-- LIBRARYS -->
+		<script src="js/vendors/zepto.min.js"></script>
+		<script src="js/vendors/fastclick.js"></script>
+		<script src="js/vendors/iscroll.js"></script>
+		<script src="js/vendors/hammer.min.js"></script>
+		<!-- FASTGAP -->
+		<script src="js/History.js"></script>
+		<script src="js/FG.js"></script>
+		<script src="js/Navigator.js"></script>
+		<script src="js/Transition.js"></script>
+		<script src="js/PageLoad.js"></script>
+		<script src="js/index.js"></script>
 
-        <script src="js/zepto.min.js"></script>
-        <!-- libraries -->
-        <script src="js/bbui.js"></script>
-        <script src="cordova.js"></script>
-        
-<script>
-    document.addEventListener("deviceready",function(){
-        setInterval(function(){
-                    var networkState = navigator.connection.type;
+		<!-- VIEWPORT -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>FastGap Project</title>
+	</head>
+	<body>
+		<!-- BOX CONTENT LOAD PAGES WITH AJAX-->
+		<div id="page">
+			<!-- MENU -->
+			<menu id="menu">
+				<div class="topcoat-list">
+					<ul class="topcoat-list__container">
+						<li class="topcoat-list__item botoes-app" data-url="home.html">
+							Home
+						</li>
+						<li class="topcoat-list__item botoes-app" data-url="page1.html">
+							Transition 1 + SCROLL TEST
+						</li>
+						<li class="topcoat-list__item botoes-app" data-url="page2.html">
+							Transition 2 + CONTROLLER EVENTS
+						</li>
+						<li class="topcoat-list__item botoes-app" data-url="page3.html">
+							Transition 3
+						</li>	
+						<li class="topcoat-list__item botoes-app" data-url="page4.html">
+							Transition 4
+						</li>	
+						<li class="topcoat-list__item botoes-app" data-url="page5.html">
+							Transition 5
+						</li>		
+					</ul>
+				</div>
+			</menu>
 
-                    var states = {};
-                    states[Connection.UNKNOWN]  = 'Sem conexão';
-                    states[Connection.ETHERNET] = 'Ethernet conexão';
-                    states[Connection.WIFI]     = 'WiFi conexão';
-                    states[Connection.CELL_2G]  = 'Cell 2G conexão';
-                    states[Connection.CELL_3G]  = 'Cell 3G conexão';
-                    states[Connection.CELL_4G]  = 'Cell 4G conexão';
-                    states[Connection.CELL]     = 'Conexão generica';
-                    states[Connection.NONE]     = 'Sem conexão';
-                    
-                    alert(states[networkState]);
-        },4000);
-    });
-    
-</script>
-
-        <!-- sample code -->
-        <script src="js/bfb_bootstrap.js"></script>
-
-        <!-- my js -->
-        <script src="js/scripts.js"></script>
-
-    </head>
-    <body> 
-    
-    </body>
+			<header id="header-app">
+				<!-- APP IMG LOAD WITH CSS -->	
+				<div id="menu-button"></div>
+			</header>
+			<!-- DYNAMIC CONTENT -->
+			<div id="content">
+                <div id="iscroll">
+                    <div id="load-content-here">
+                        
+                    </div>
+                </div>
+			</div>
+		</div>
+	</body>
 </html>
