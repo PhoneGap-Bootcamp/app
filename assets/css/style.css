@@ -1,0 +1,56 @@
+/* FASTGAP https://github.com/GustavoCostaW/FastGap */
+
+/* CUSTOMIZE YOUR APP */
+
+#menu ul li {
+	color: #A02615;
+	font-weight: bold;
+}
+#content {
+	background: white;
+	color: #A02615;
+}
+#content a {
+	font-weight: bold;
+	color: #A02615;
+}
+.title-page {
+	font-size: 30px;
+	color: #A02615;
+	font-weight: bold;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+.page-item {
+	margin-top: 20px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	text-align: center;
+}
+.page-item img {
+	float: right;
+	width: 80px;
+	height: 80px;
+	border-radius: 60px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+#internal-page {
+	width: 100%;
+}
+#internal-page h1 {
+	font: 5px"Source Sans", helvetica, arial, sans-serif;
+	width: 100%;
+	font-size: 25px;
+	text-align: center;
+}
+.page-item p {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 16px;
+}
+html,
+body,
+#map {
+	height: 100%;
+}
