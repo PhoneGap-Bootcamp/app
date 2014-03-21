@@ -47,6 +47,9 @@
 		case 'geolocation.html':
 			FG.currentController = new GeolocationController();
 			break;
+		case 'localstorage.html':
+			FG.currentController = new LocalStorageController();
+			break;
 		default:
 			alert('No controller found.');
 			break;

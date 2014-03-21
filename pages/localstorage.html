@@ -1,27 +1,14 @@
-<script>
-        function localStorage() {
-        
-            function insertDados(nome,sobrenome){
-                db.transaction(function (tx) {
-                        
-                               tx.executeSql('CREATE TABLE IF NOT EXISTS                                         AGENDA(id INTEGER NOT NULL PRIMARY KEY                                             AUTOINCREMENT, nome TEXT NOT NULL, sobrenome                                     VARCHAR NOT NULL)');
-                               
-                               var query = "INSERT INTO AGENDA (nome, sobrenome)                                 VALUES (?, ?);"; 
-                               tx.executeSql(query,                                                              [nome,sobrenome],function(transaction, results){ 
-                                    if (!results.rowsAffected) { 
-                                        alert("Error"); 
-                                    } 
-                                    else { 
-                                        
-                                        selectDataBase();
-                                        
-                                    } 
-                                });
-                            });
-            }
-            
-            $("#insertnewuser").on("click",function(){
-                if()  
-            });
-        }
-</script>
+<div id="internal-page">
+	<div id="agenda">
+		<div class='page-item'>
+			<form action="#">
+				<input type="text" placeholder="Nome" required id="campo-nome" />
+				<br/>
+				<input type="text" placeholder="Sobrenome" required id="campo-sobrenome" />
+				<br/>
+				<input type="button" id="cadastrar-user" value="Cadastrar usuário" />
+			</form>
+		</div>
+		<div id="itens-agenda"></div>
+	</div>
+</div>
