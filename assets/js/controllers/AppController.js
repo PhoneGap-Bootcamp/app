@@ -14,8 +14,13 @@ var AppController = function () {};
 AppController.prototype = {
 	initialize: function () {
 
-		//YOUR "GLOBAL CODE" HERE.
-
+	},
+	api: function (param, returnData) {
+		$.get("http://dborba.com/json.php?=param" + param, function (data) {
+			if (typeof returnData !== "undefined") {
+				returnData(data);
+			}
+		});
 
 	},
 	destroy: function () {

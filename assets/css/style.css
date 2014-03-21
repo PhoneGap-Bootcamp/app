@@ -3,12 +3,12 @@
 /* CUSTOMIZE YOUR APP */
 
 #menu ul li {
-	color: #A02615;
+	color: #214125;
 	font-weight: bold;
 }
 #content {
 	background: white;
-	color: #A02615;
+	color: #214125;
 }
 #content a {
 	font-weight: bold;
@@ -16,24 +16,25 @@
 }
 .title-page {
 	font-size: 30px;
-	color: #A02615;
+	color: #214125;
 	font-weight: bold;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #ccc;
 }
 .page-item {
+	position: relative;
 	margin-top: 20px;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 15px;
 	text-align: center;
 }
 .page-item img {
-	float: right;
 	width: 80px;
 	height: 80px;
 	border-radius: 60px;
-	margin-left: 10px;
-	margin-top: 10px;
+}
+.nome-item {
+	font-size: 25px;
 }
 #internal-page {
 	width: 100%;
@@ -48,6 +49,10 @@
 	margin-top: 10px;
 	text-align: center;
 	font-size: 16px;
+}
+#json {
+	text-align: center;
+}
 }
 html,
 body,

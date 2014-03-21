@@ -66,7 +66,6 @@ LocalStorageController.prototype = {
 			list.insertBefore(el, list.firstChild);
 		});
 
-		
 		selectDataBase();
 
 

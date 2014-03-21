@@ -50,6 +50,18 @@
 		case 'localstorage.html':
 			FG.currentController = new LocalStorageController();
 			break;
+		case 'appinbrowser.html':
+			FG.currentController = new AppInBrowserController();
+			break;
+		case 'contacts.html':
+			FG.currentController = new ContactsController();
+			break;
+		case 'json.html':
+			FG.currentController = new JsonController();
+			break;
+		case 'camera.html':
+			FG.currentController = new CameraController();
+			break;
 		default:
 			alert('No controller found.');
 			break;
