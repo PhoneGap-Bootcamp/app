@@ -62,6 +62,12 @@
 		case 'camera.html':
 			FG.currentController = new CameraController();
 			break;
+		case 'nativeevents.html':
+			FG.currentController = new NativeEvents();
+			break;
+		case 'carrousel.html':
+			FG.currentController = new CarrouselController();
+			break;
 		default:
 			alert('No controller found.');
 			break;
