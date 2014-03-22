@@ -36,6 +36,7 @@ CameraController.prototype = {
 		});
 
 		function onSuccess(imageData) {
+			$("#status-cam").html("enviando foto...");
 			//imageData é nossa base64
 
 			//quando tirar foto, criar 
@@ -62,6 +63,8 @@ CameraController.prototype = {
 					foo: file
 				}).then(function (object) {
 					//foi salvo!
+
+					$("#status-cam").html("");
 				});
 			}, function (error) {
 				//tivemos algum error ao salvar.

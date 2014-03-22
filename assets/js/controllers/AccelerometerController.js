@@ -19,7 +19,7 @@ AccelerometerController.prototype = {
 
 		//opcoes
 		var options = {
-			frequency: 100
+			frequency: 10
 		}; // atualizar a cada 100 milesegundos
 
 		//eu posso verificar de 2 formas, ficar assistindo, ou seja a cada 2 segundos ele chama o onsucess ou apenas uma vez que é o código depois desse abaixo

@@ -5,7 +5,7 @@ NotificationController.prototype = {
 
 		/* ALERTA SIMPLES */
 		navigator.notification.alert(
-			'Eu sou uma mensagem! essa mensagem é diferente do simples alert()', // menssagem
+			'Eu sou uma mensagem! essa mensagem é diferente do simples alert()', // mensagem
 			null, // callback
 			'Titulo aqui', // titulo
 			'OK' // botoes 

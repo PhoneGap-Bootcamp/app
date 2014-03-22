@@ -18,6 +18,7 @@
 	font-size: 30px;
 	color: #214125;
 	font-weight: bold;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #ccc;
 }
@@ -70,9 +71,26 @@ input {
 #fotos img {
 	display: inline-block;
 	float: left;
-	margin-left: 20px;
+	margin-left: 10px;
 	margin-top: 20px;
 	border: 1px solid #ccc;
+}
+.swiper-container,
+.swiper-slide {
+	margin: auto;
+	width: 250px;
+}
+.swiper-slide img {
+	width: 250px;
+	height: 250px;
+}
+#contacts-input {
+	text-align: center;
+	width: 100%;
+}
+#contacts-input input,
+#contacts-input button {
+	margin: 0 auto;
 }
 html,
 body,

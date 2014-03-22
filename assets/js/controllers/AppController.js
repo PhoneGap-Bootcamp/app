@@ -2,7 +2,7 @@
 
 IMPORTANT, READ LIBRARY DOCS FOR BETTER CUSTOMIZATION 
 
-http://iscrolljs.com
+
 http://zeptojs.com
 http://topcoat.io
 
