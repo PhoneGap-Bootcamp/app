@@ -80,7 +80,7 @@ input {
 	margin: auto;
 	width: 250px;
 }
-.swiper-slide img {
+.swiper-slide .imagem {
 	width: 250px;
 	height: 250px;
 }

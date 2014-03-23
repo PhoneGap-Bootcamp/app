@@ -19,10 +19,9 @@ CameraController.prototype = {
 			//loop
 			$.each(listagem, function (index, item) {
 				//criando nossa imagem e adicionando
-				img = new Image();
-				img.width = 100;
-				img.height = 100;
-				img.src = item.attributes.foo._url;
+				img = document.createElement("div");
+				img.setAttribute("class", "imagem");
+				img.css("background-image", item.attributes.foo._url);
 				listfotos.appendChild(img);
 			});
 		});
